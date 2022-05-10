@@ -12,12 +12,13 @@
   --primary-d-color: #2B283A;
   --secondary-d-color: #4A4E74;
   --primary-L-accent: #F47D27;
+  --secondart-L-accent: #297FE5;
   
 
 }
 
 /* Typography */
-h1,h2{
+h1,h2,h3{
   font-weight: 700;
 }
 /* body, */
@@ -146,7 +147,8 @@ input:checked + .slider:before {
 /* main content */
 .main-content,
 .card,
-.cardInfo{
+.cardInfo,
+.contact-link{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,5 +214,100 @@ margin-bottom: 9px;
  font-size: 10.5px;
 line-height: 15px;
 cursor: pointer;
+margin-bottom: 17px;
 
+}
+
+/* btn */
+
+.btn-row{
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  /* width: 150px; */
+ 
+}
+.btn{
+  width: 115px;
+  height: 34px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 6px;
+  padding:9px 13px 9px 11px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.contact-link{
+  text-decoration: none;
+  width: 100%;
+  
+  background-color: red;
+}
+.icon{
+  margin-right:5px ;
+}
+
+.email-btn{
+  border: 1px solid #D1D5DB;
+  background-color: #FFF;
+  margin-right:17px ;
+  
+}
+
+.email-btn:focus,
+.email-btn:hover{
+  background-color: var(--secondart-L-accent);
+  
+  transition: all 0.3s;
+}
+
+
+.linkedin-btn{
+
+  background-color: var(--secondart-L-accent);
+ 
+}
+
+.email-btn > a {
+  color: var(--primary-d-color);
+  
+}
+.email-btn > a:focus,
+.email-btn > a:hover{
+ color: #FFF;
+ transition: color 0.3s;
+}
+
+.linkedin-btn > a{
+ color: #FFF;
+}
+.linkedin-btn > a:focus,
+.linkedin-btn > a:hover{
+ color: var(--primary-d-color);
+ transition: color 0.3s;
+}
+
+
+/* About me */
+
+.about-me{
+  margin-top: 25px;
+  width: 247px;
+  height: 201px;
+}
+
+.info-title {
+  font-size: 16px;
+  line-height: 24px;
+}
+.info {
+  font-size: 10.5px;
+  line-height: 15.5px;
+  color: var(--secondary-d-color);
+
+}
+
+.info:first-of-type{
+  margin-bottom: 27px;
 }
