@@ -1,6 +1,7 @@
 import Headshot from "./Headshot"
 import  headshot from '../images/headshot.png'
 import CardInfo from "./CardInfo"
+import CardFooter from "./CardFooter"
 
 const DigitalBusinessCard = ({fullName,position,site}) => {
   return (
@@ -12,6 +13,7 @@ const DigitalBusinessCard = ({fullName,position,site}) => {
     
     />
         
+        <CardFooter />
     </div>
   )
 }

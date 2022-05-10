@@ -14,7 +14,7 @@ const CardInfo = ({fullName, position,site,text,text2,about,interests}) => {
 
         <p className='job-title'>{position}</p>
 
-        <a hrefLang='#' className='website'>{site}</a>
+        <a hrefLang='http://localhost:3001' target='_blank' className='website'>{site}</a>
         
         <Button text={'Email'} text2 ={'Linkedin'} />
       <Aboutme  about={about} interests={interests}/>
