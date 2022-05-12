@@ -5,7 +5,7 @@ import { ThemeContext,themes } from "./contexts/themeContext";
 
 export default function ThemeContextWrapper(props) {
   const [theme, setTheme] = useState(themes.dark);
-
+ const mainContent = document.querySelector(".main-content")
   function changeTheme(theme) {
     setTheme(theme);
   }
@@ -13,11 +13,17 @@ export default function ThemeContextWrapper(props) {
   useEffect(() => {
     switch (theme) {
       case themes.light:
-        document.body.classList.add('white-content');
+          console.log(document.querySelector('.main-content'))
+          document.querySelector('.main-content').classList.add('white-content')
+        // document.body.classList.add('white-content');
+        // Change all these styels
+        
         break;
       case themes.dark:
       default:
-        document.body.classList.remove('white-content');
+        console.log(document.querySelector('.main-content'))
+        document.querySelector('.main-content').classList.remove('white-content')
+        // document.body.classList.remove('white-content');
         break;
     }
   }, [theme]);

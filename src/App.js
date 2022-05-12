@@ -1,57 +1,33 @@
-import { useState } from "react";
-
+import React,{ useState } from "react";
+// import { Button, Container, InputGroup } from 'reactstrap';
+import { ThemeContext,themes } from "./contexts/themeContext";
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
 
-function App() {
-  const[theme,setTheme] = useState([{light:true, dark:false}])
-// {light:true, dark:false}
-
-  const themeSwitcher =(e) =>{
-    // // comeback to this 
-    const checkbox = e.target.checked
-   
-if(checkbox){
-  setTheme([{
-    light:false,
-    dark:true
-  }])
-  console.log(theme)
-  console.log(checkbox)
-
-}else if(!checkbox){
-  setTheme([{
-    light:true,
-    dark:false
-  }])
-  console.log(theme)
-  console.log(checkbox)
-}
-
-    // if(checkbox){
-    //   console.log('its dark')
-    // {  document.body.style.backgroundColor = 'black'}
-    // setTheme([{light:false,dark:true}])
-    // // setTheme({light:false,dark:true})
-    // console.log(theme)
-    // console.log(`check is ${checkbox}`)
-    // } else{
-    //   console.log('its light')
-    //   {  document.body.style.backgroundColor = 'white'  }
-    //   // setTheme({light:false,dark:true})
-
-
-    //   setTheme([{light:true,dark:false}])
-    // console.log(theme)
-    // console.log(`check is ${checkbox}`)
-
-    // }
-    // console.log(`theme is ${JSON.stringify(theme)}`)
-
-}
+function App({lightson}) {
+  const [darkMode, setDarkMode] = React.useState(true);
+  
+  // const lightsPlz = () =>{
+  //   setDarkMode(!darkMode);
+  //   changeTheme(darkMode ? themes.light : themes.dark);
+  // }
   return (
     <div className="container">
-      <Navbar themeSwitcher={themeSwitcher} />
+
+<ThemeContext.Consumer>
+        {({ changeTheme }) => (
+          <Navbar
+            toggleDark={() => {
+              setDarkMode(!darkMode);
+              changeTheme(darkMode ? themes.light : themes.dark);
+            }}
+          />
+        )}
+      </ThemeContext.Consumer>
+
+      {/* <Navbar  /> */}
+
+
       <MainContent />
   
     </div>

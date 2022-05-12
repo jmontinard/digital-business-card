@@ -2,7 +2,7 @@ import React from 'react'
 // import Logo from '../images/logo-digital-bc.jpeg'
 import Logo from '../images/logo-dbc1.png'
 
-const Navbar = ({themeSwitcher}) => {
+const Navbar = ({toggleDark}) => {
 
   return (
    <header>
@@ -25,7 +25,7 @@ const Navbar = ({themeSwitcher}) => {
        
        <div className="theme-switch-wrapper">
     <label className="theme-switch" htmlFor="checkbox">
-        <input type="checkbox" id="checkbox" onClick={themeSwitcher}/>
+        <input type="checkbox" id="checkbox" onClick={()=> toggleDark()}/>
         <div className="slider round"></div>
   </label>
   
