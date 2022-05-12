@@ -5,7 +5,7 @@ import Logo from '../images/logo-dbc1.png'
 const Navbar = ({toggleDark}) => {
 
   return (
-   <header>
+   <header className='header head'>
    <nav className='
    navBar'>
 
@@ -16,9 +16,9 @@ const Navbar = ({toggleDark}) => {
        
        <div className='navBar-row'> 
        <ul className='navBar-ul'>
-           <li className='nav-li'><a className='nav-link' hrefLang='#'>Home </a></li>
-           <li className='nav-li'><a className='nav-link' hrefLang='#'>About</a></li>
-           <li className='nav-li'><a className='nav-link' hrefLang='#'>Contact Us</a> </li>
+           <li className='nav-li'><a className='nav-link nLink' hrefLang='#'>Home </a></li>
+           <li className='nav-li'><a className='nav-link nLink' hrefLang='#'>About</a></li>
+           <li className='nav-li'><a className='nav-link nLink' hrefLang='#'>Contact Us</a> </li>
 
        </ul>
 </div>

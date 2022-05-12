@@ -15,6 +15,7 @@
   --secondart-L-accent: #297FE5;
   --tertiary-L--grey: #D5D4D8;
   --primary-icon-color : #918E9B;
+  --primaray-d-bg: #23252C;
 
 }
 
@@ -42,6 +43,11 @@ header{
   height: 90px;
   padding: 20px;
   border-bottom: 1px solid var(--tertiary-L--grey);
+  
+}
+.header {
+  background-color: var(--pearl-bg);
+
 }
 
 .navBar,
@@ -53,11 +59,10 @@ header{
   justify-content: space-between;
   align-items: center;
 }
-/* 
-.navBar{
 
+.navBar{
 }
-.logo-container{
+/* .logo-container{
 
 } */
 .logo {
@@ -87,8 +92,19 @@ list-style: none;
 
 .nav-link {
  cursor: pointer;
- color: #000000;
+ color: var(--primary-d-color);
 }
+
+.header-dark {
+  background-color: var(--primaray-d-bg);
+}
+
+.nav-link-dark {
+ cursor: pointer;
+  color: var(--L-grey-bg);
+}
+
+
 /* .nav-link:active,
 .nav-link:visited {
   color: #00000080;
@@ -97,6 +113,11 @@ list-style: none;
 .nav-link:focus,
 .nav-link:hover {
   color: #00000080;
+  transition: color 0.3s;
+}
+.nav-link-dark:focus,
+.nav-link-dark:hover {
+  color: #f5f5f5ce;
   transition: color 0.3s;
 }
 /*Simple css to style it like a toggle switch*/
@@ -167,7 +188,7 @@ input:checked + .slider:before {
 }
 
 .main-content{
-  height: 90vh;
+  height: 91vh;
   /* background-color: var(--pearl-bg); */
   
 }

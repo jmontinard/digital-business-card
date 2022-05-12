@@ -5,6 +5,13 @@ import { ThemeContext,themes } from "./contexts/themeContext";
 
 export default function ThemeContextWrapper(props) {
   const [theme, setTheme] = useState(themes.dark);
+
+  
+  const header = document.querySelector(".head")
+  const navLink = document.querySelectorAll(".nLink")
+
+  const companyName = document.querySelector('.company-name')
+
  const mainContent = document.querySelector(".main-content")
 
  const cardInfo =document.querySelector('.cardInfo')
@@ -19,8 +26,21 @@ export default function ThemeContextWrapper(props) {
 
  const footer =document.querySelector('.footer')
 
+
  const darker = () =>{
-   mainContent.classList.add('white-content')
+
+    header.classList.remove('header')
+    header.classList.add('header-dark')
+
+    navLink.forEach(link=>{
+        link.classList.remove('nav-link')
+        link.classList.add('nav-link-dark')
+
+    })
+
+    companyName.style.color= "var(--L-grey-bg)"
+
+    document.querySelector('.main-content').classList.add('white-content')
 
     cardInfo.style.backgroundColor ='#1A1B21'
 
@@ -38,18 +58,52 @@ website.style.color ="var(--L-grey-bg)"
  }
 
  const lighter = () =>{
-        cardInfo.style.backgroundColor="var(--L-grey-bg)"
+    if(mainContent){
+
+        header.classList.add('header')
+        header.classList.remove('header-dark')
+    
+        navLink.forEach(link=>{
+            link.classList.add('nav-link')
+            link.classList.remove('nav-link-dark')
+    
+        })
+
+      companyName.style.color= "var(--primary-d-color)"
+
+        cardInfo.style.backgroundColor="#F5F5F5"
+           cardInfo.style.backgroundColor="var(--L-grey-bg)"
 
         cardTitle.style.color ="var(--primary-d-color)"
-        cardTitle.style.color ="var(--L-grey-bg)"
     
-        website.style.color ="var(--L-grey-bg)"
+        website.style.color ="var(--primary-d-color)"
 
          infoTitle.forEach(title =>title.style.color = "var( --primary-d-color)")
        
        info.forEach(info=>info.style.color = "var( --secondary-d-color)")
     
        footer.style.backgroundColor ='var( --tertiary-L--grey)'
+
+    } 
+    
+
+
+
+// cardInfo.style.backgroundColor="#F5F5F5"
+
+        // cardInfo.style.backgroundColor="var(--L-grey-bg)"
+
+    //     console.log(cardTitle)
+    //     cardTitle.style.color ="#2B283A"
+    //     cardTitle.style.color ="var(--L-grey-bg)"
+    
+    //     website.style.color ="var(--L-grey-bg)"
+
+    //      infoTitle.forEach(title =>title.style.color = "var( --primary-d-color)")
+       
+    //    info.forEach(info=>info.style.color = "var( --secondary-d-color)")
+    
+    //    footer.style.backgroundColor ='var( --tertiary-L--grey)'
  }
 
 
