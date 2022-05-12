@@ -198,6 +198,7 @@ background-color: var(--L-grey-bg);
 
 .cardInfo{
 padding: 20px 35px 31px ;
+width: 100%;
 }
 
 .card-title {
@@ -340,7 +341,7 @@ margin-bottom: 17px;
 } */
 
 
-footer {
+.footer {
   border-radius: 0px 0px 7px 7px;
 background-color: var(--tertiary-L--grey);
 width: 100%;

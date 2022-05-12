@@ -2,7 +2,7 @@ import { FaTwitterSquare, FaFacebookSquare, FaInstagramSquare, FaGithubSquare } 
 
 const CardFooter = () => {
   return (
-   <footer>
+   <footer className="footer">
 
 
 
